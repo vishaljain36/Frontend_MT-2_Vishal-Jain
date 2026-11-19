@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart with Discount</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">STATIONERY STORE</p>
+      <h1>Shopping Cart</h1>
+      <p class="subtitle">Manage your items and enjoy a discount on orders of ₹1,000 or more.</p>
+    </header>
+
+    <section class="cart-card" aria-label="Shopping cart">
+      <div id="cart-content">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th class="right">Total</th>
+                <th><span class="sr-only">Action</span></th>
+              </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+          </table>
+        </div>
+
+        <div class="summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="subtotal">₹0.00</strong>
+          </div>
+          <div class="summary-row discount-row">
+            <span>Discount (10% on bills ≥ ₹1,000)</span>
+            <strong id="discount">₹0.00</strong>
+          </div>
+          <div class="summary-row grand-total">
+            <span>Amount Payable</span>
+            <strong id="payable">₹0.00</strong>
+          </div>
+          <p id="discount-note" class="note" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div id="empty-cart" class="empty-state" hidden>
+        <div class="empty-icon">🛒</div>
+        <h2>Your cart is empty.</h2>
+        <p>Add stationery items to see your bill here.</p>
+        <button type="button" class="primary-btn" id="restore-cart">Restore Items</button>
+      </div>
+    </section>
+    <footer>Shopping Cart · JavaScript Arrays and Objects</footer>
+  </main>
+</body>
+</html>
