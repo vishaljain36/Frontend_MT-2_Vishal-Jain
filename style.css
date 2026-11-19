@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+:root { font-family: Arial, Helvetica, sans-serif; color: #202938; background: #f2f5fa; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 14px; }
+.quiz-card { width: min(100%, 560px); background: #fff; border: 1px solid #e5eaf2; border-radius: 18px; padding: 34px; box-shadow: 0 15px 40px rgba(30,45,75,.08); }
+header { margin-bottom: 28px; }
+.eyebrow { color: #5267d8; font-size: 11px; font-weight: 700; letter-spacing: 1.8px; margin: 0 0 9px; }
+h1 { font-size: 30px; margin: 0; }
+.progress-line { display: flex; justify-content: space-between; color: #687386; font-size: 13px; margin-bottom: 9px; }
+.progress-track { height: 7px; background: #edf0f6; border-radius: 20px; overflow: hidden; margin-bottom: 28px; }
+#progress-fill { height: 100%; width: 25%; background: #5267d8; border-radius: inherit; transition: width .2s ease; }
+h2 { font-size: 19px; line-height: 1.45; margin: 0 0 19px; }
+.options { display: grid; gap: 11px; }
+.option { display: flex; align-items: center; gap: 12px; padding: 14px 15px; border: 1px solid #dfe4ed; border-radius: 10px; cursor: pointer; transition: .15s ease; }
+.option:hover { border-color: #aab5f6; background: #f8f9ff; }
+.option:has(input:checked) { border-color: #5267d8; background: #f0f2ff; }
+.option input { accent-color: #5267d8; width: 16px; height: 16px; }
+.option span { font-size: 14px; }
+.selection-message { color: #8992a2; font-size: 12px; min-height: 17px; margin: 15px 0 10px; }
+.primary-btn { background: #5267d8; color: #fff; border: 0; border-radius: 9px; padding: 12px 21px; font-size: 14px; font-weight: 700; cursor: pointer; }
+.primary-btn:hover:not(:disabled) { background: #4054c4; }
+.primary-btn:disabled { background: #b9c1d4; cursor: not-allowed; }
+.result-screen { text-align: center; padding: 24px 0 8px; }
+.result-screen .eyebrow { margin-bottom: 20px; }
+.score { color: #5267d8; font-size: clamp(54px, 12vw, 72px); font-weight: 700; letter-spacing: -3px; margin: 8px 0; }
+.percentage { color: #687386; margin: 8px 0 4px; }
+.result-screen h2 { margin: 8px 0 24px; font-size: 20px; }
+@media (max-width: 480px) { .quiz-card { padding: 25px 19px; } h1 { font-size: 27px; } }
